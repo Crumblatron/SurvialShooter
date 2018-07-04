@@ -9,8 +9,8 @@ public class EnemyManager : MonoBehaviour {
     int increaseSpawnRate = 20;
 
     void Start() {
+        // Invoke repeating is probably more expensive then putting the logic into the Update function, but for now this is fine
         InvokeRepeating("Spawn", spawnTime, spawnTime);
-
         InvokeRepeating("IncreaseSpawnRate", increaseSpawnRate, increaseSpawnRate);
     }
 
